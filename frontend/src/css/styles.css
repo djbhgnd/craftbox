@@ -1,0 +1,9 @@
+<div class="projectCard">
+<img v-bind:src="project.projectImg" id="detailProjectImg" class="projectImg" width="400" height="400">
+<div class="supplyContainerCard">
+  <h4><b>{{project.projectName}}</b></h4>
+  <p id="detailSupplies" class="supplies" v-for="currentSupply in project.listOfSupplies" v-bind:key="currentSupply.supplyId">• {{currentSupply.supplyName}}</p>
+  <p v-if="project.ageRange !== '' ">Great for ages:{{project.ageRange}}</p>
+  <p v-if="project.season !== '' ">Great for {{project.season}}</p>
+  <a v-bind:href="project.projectInstructions" target="_blank"> Instructions: {{project.projectName}} </a>
+</div>
